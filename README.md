@@ -1,4 +1,4 @@
-	# Practice-Js-1
+
 ## OVERVIEW
 
 - This document provides the list of important technologies that would be used to implement, the objectives to be achieved and the progress of the project.
