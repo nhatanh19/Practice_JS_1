@@ -1,6 +1,3 @@
-@use "../abstracts/" as *;
-
-
 @font-face {
     font-family: OpenSans-Medium;
     src: url('../../../assets/fonts/Open_Sans/OpenSans-Medium.ttf') format("truetype");
@@ -22,7 +19,7 @@
 }
 
 body {
-    font-size: $primary-font;
+    font-family: $primary-font;
     font-weight: 400;
     font-size: 24px;
     max-width: 1800px;

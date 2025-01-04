@@ -1,39 +1,43 @@
-export class LoginView {
-    constructor() {
-        this.form = document.getElementById('loginForm');
-        this.username = document.getElementById('username');
-        this.password = document.getElementById('password');
-    }
+import './../../styles/main.scss';
 
-    bindLogin(handler) {
-        this.form.addEventListener('submit', e => {
-            e.preventDefault();
-            const username = this.username.value.trim();
-            const password = this.password.value.trim();
-            
-            handler(username, password);
-        });
-    }
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('registerForm');
+    const togglePassword = document.querySelector('.toggle-password');
+    const passwordInput = document.getElementById('password');
 
-    showError(message) {
-        // Tạo hoặc cập nhật thông báo lỗi
-        let errorDiv = document.querySelector('.error-message');
-        if (!errorDiv) {
-            errorDiv = document.createElement('div');
-            errorDiv.className = 'error-message';
-            this.form.insertBefore(errorDiv, this.form.firstChild);
-        }
-        errorDiv.textContent = message;
-    }
+    // Toggle password visibility
+    togglePassword.addEventListener('click', function() {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        // Update icon based on password visibility
+        togglePassword.querySelector('img').src = type === 'password' ? 'eye-icon.svg' : 'eye-off-icon.svg';
+    });
 
-    clearError() {
-        const errorDiv = document.querySelector('.error-message');
-        if (errorDiv) {
-            errorDiv.remove();
-        }
-    }
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-    resetForm() {
-        this.form.reset();
-    }
-}
+        // Collect form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            country: document.getElementById('country').value,
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value
+        };
+
+        // Here you would typically send the data to your server
+        console.log('Form submitted:', formData);
+
+        // You can add your API call here
+        // fetch('/api/register', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(formData)
+        // })
+    });
+});
