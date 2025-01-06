@@ -1,0 +1,20 @@
+.container {
+    .login-background {
+        height: 100dvh;
+        min-width: 368px;
+    }
+    .login-form {
+        flex: 1.5;
+        @media (max-width: 910px) {
+            .register__content {
+                width: 80%;
+            }
+        }
+    }
+    @include responsive('tablet') {
+        & {
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+    }
+}
