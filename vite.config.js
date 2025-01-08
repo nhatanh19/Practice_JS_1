@@ -4,6 +4,7 @@ import {
 import path from 'path';
 
 export default defineConfig({
+    root: './src',
     // Base URL cho production build
     base: '/',
 
