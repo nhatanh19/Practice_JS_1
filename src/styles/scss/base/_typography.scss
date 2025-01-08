@@ -1,0 +1,29 @@
+@font-face {
+    font-family: OpenSans-Medium;
+    src: url('../../../assets/fonts/Open_Sans/OpenSans-Medium.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../../../assets/fonts/Poppins/Poppins-Medium.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../../../assets/fonts/Poppins/Poppins-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url('../../../assets/fonts/Open_Sans/OpenSans-Regular.ttf') format("truetype");
+}
+
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 24px;
+    max-width: 1800px;
+    margin: 0 auto;
+    min-width: 320px;
+    line-height: 36px;
+}
