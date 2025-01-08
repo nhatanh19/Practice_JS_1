@@ -1,0 +1,67 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LankaStay - Create Account</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background">
+            <img class="background__image" src="./../assets/images/bg-status-1x.png" alt="Background">
+            <div class="background__overlay"></div>
+            <div class="background__content">
+                <h1 class="background__title"><span>Lanka</span><span>Stay.</span></h1>
+            </div>
+        </div>
+        <div class="register">
+            <div class="register__content">
+                <h2 class="register__title">Create Account</h2>
+                <form class="register__form">
+                    <div class="register__form-group">
+                        <label class="register__label" for="name">Name</label>
+                        <input class="register__input" type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="register__form-group">
+                        <label class="register__label" for="email">E mail</label>
+                        <input class="register__input" type="email" id="email" placeholder="name@gmail.com" required>
+                    </div>
+                    <div class="register__form-group">
+                        <label class="register__label" for="phone">Phone No</label>
+                        <input class="register__input" type="tel" id="phone" placeholder="With Country Code" required>
+                    </div>
+                    <div class="register__form-group">
+                        <label class="register__label" for="country">Country</label>
+                        <input class="register__input" type="text" id="country" placeholder="Country Name" required>
+                    </div>
+                    <div class="register__form-group">
+                        <label class="register__label" for="username">Username</label>
+                        <input class="register__input" type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="register__form-group">
+                        <label class="register__label" for="password">Password</label>
+                        <div class="register__password">
+                            <input class="register__input register__input--password" type="password" id="password" placeholder="6+ characters" required>
+                            <!-- <button class="register__toggle" type="button">
+                                <img class="register__toggle-icon" src="./../assets/icons/Vector.png" alt="Toggle password visibility">
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="register__terms">
+                        By signing up you agree to <a href="#" class="register__terms-link">terms and conditions</a> at zoho.
+                    </div>
+                    <button class="register__submit" type="submit">Register</button>
+                    <div class="register__login">
+                        <a class="register__login-link" href="./login">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./../js/views/register.view.js"></script>
+</body>
+
+</html>
