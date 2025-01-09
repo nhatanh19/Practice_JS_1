@@ -1,0 +1,10 @@
+.container {
+    .notification {
+        &__message {
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 60px;
+            text-align: center;
+        }
+    }
+}
